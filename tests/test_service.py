@@ -2,6 +2,7 @@
 Test suite for continuous integration build verification
 """
 import unittest
+from service import app_running
 
 
 class TestService(unittest.TestCase):
@@ -9,7 +10,7 @@ class TestService(unittest.TestCase):
 
     def test_service_running(self):
         """Test service is operational"""
-        self.assertTrue(True)
+        self.assertTrue(app_running())
 
 
 if __name__ == '__main__':
